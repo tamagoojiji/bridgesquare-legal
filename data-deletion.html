@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>データ削除手順 — BridgeSquare</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    color: #000;
+    background: #fff;
+    line-height: 1.85;
+  }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 .5rem;
+  }
+  .lead {
+    color: #555;
+    font-size: .95rem;
+    margin: 0 0 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #000;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2.5rem 0 .8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ccc;
+  }
+  p, li { font-size: .95rem; }
+  ol { padding-left: 1.4rem; margin: .5rem 0 1.2rem; list-style: decimal; }
+  ul { padding-left: 1.4rem; margin: .5rem 0 1.2rem; list-style: disc; }
+  li { margin: .4rem 0; }
+  a { color: #000; }
+  .meta {
+    font-size: .85rem;
+    color: #555;
+    margin: 0 0 2rem;
+  }
+  .meta div { margin: .15rem 0; }
+  .note {
+    background: #f5f5f5;
+    border-left: 3px solid #000;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: .9rem;
+  }
+  .nav {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #000;
+    font-size: .85rem;
+    color: #555;
+  }
+  .nav a { color: #000; text-decoration: underline; }
+  code {
+    background: #f0f0f0;
+    padding: .1rem .35rem;
+    border-radius: 3px;
+    font-size: .9em;
+  }
+</style>
+</head>
+<body>
+
+<h1>データ削除手順</h1>
+<p class="lead">本サービス「スレッズスケジューラー」では、ユーザーのデータはすべてユーザー自身のGoogleアカウント内（Googleスプレッドシートおよび Google Apps Script のScript Properties）に保管されます。以下の手順により、ユーザーご自身でいつでもすべてのデータを削除いただけます。</p>
+
+<div class="meta">
+  <div>制定日: 2026年4月29日</div>
+  <div>最終更新日: 2026年4月29日</div>
+  <div>事業者: BridgeSquare</div>
+  <div>連絡先: tamagoojiji@gmail.com</div>
+</div>
+
+<h2>1. 投稿予約データの削除</h2>
+<p>本サービスで使用しているGoogleスプレッドシートを、Google ドライブ上で削除してください。</p>
+<ol>
+  <li>Google ドライブ（<a href="https://drive.google.com/" target="_blank">https://drive.google.com/</a>）を開く</li>
+  <li>「スレッズスケジューラー」のスプレッドシートを右クリック</li>
+  <li>「ゴミ箱に移動」を選択</li>
+  <li>ゴミ箱を空にする（完全削除）</li>
+</ol>
+
+<h2>2. Threads APIアクセストークンの削除</h2>
+<p>スプレッドシートを削除すると、紐づく Google Apps Script およびそのScript Properties（アクセストークンの保管領域）も同時に削除されます。追加の操作は不要です。</p>
+
+<h2>3. Threads（Meta）側でのアプリ連携の解除</h2>
+<p>念のため、Threads アカウント側でも本アプリの連携を解除することを推奨します。</p>
+<ol>
+  <li>Threads アプリまたは Web 版にログイン</li>
+  <li>プロフィール → 設定 → 「アプリとウェブサイト」</li>
+  <li>本サービスのアプリを選択して「削除」</li>
+</ol>
+
+<h2>4. Meta Developer Platform 側でのアプリ削除（任意）</h2>
+<p>Threads API アプリそのものも不要であれば、以下の手順で削除できます。</p>
+<ol>
+  <li>Meta for Developers（<a href="https://developers.facebook.com/" target="_blank">https://developers.facebook.com/</a>）にログイン</li>
+  <li>「マイアプリ」から該当アプリを選択</li>
+  <li>「設定 → ベーシック」最下部の「アプリを削除」をクリック</li>
+</ol>
+
+<div class="note">
+  <strong>ご注意:</strong> 本サービスは、ユーザーのデータを当方が運営するサーバーに保存していません。すべてのデータはユーザー自身の Google アカウント内に保管されているため、上記手順を実施いただくことで完全に削除されます。
+</div>
+
+<h2>5. 削除手順についてのお問い合わせ</h2>
+<p>削除手順がご不明な場合や、削除に問題が生じた場合は、以下の窓口までご連絡ください。</p>
+<ul>
+  <li>連絡先: tamagoojiji@gmail.com</li>
+  <li>件名に「データ削除に関するお問い合わせ」と明記してください</li>
+  <li>原則として、3営業日以内に返信いたします</li>
+</ul>
+
+<div class="nav">
+  <a href="./index.html">← 一覧に戻る</a>
+</div>
+
+</body>
+</html>
